@@ -10,7 +10,9 @@ module.exports = {
     common.initializeApp(opts, templatePath, path.join('resources', 'app'), function buildWinApp (err, tempPath) {
       if (err) return callback(err)
 
+      var oldExePath = path.join(tempPath, 'brave.exe')
       var newExePath = path.join(tempPath, `${opts.name}.exe`)
+      fs.renameSync(oldExePath, newExePath)
       var operations = [
         function (cb) {
           cb()
