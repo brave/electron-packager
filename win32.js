@@ -13,7 +13,7 @@ module.exports = {
       var newExePath = path.join(tempPath, `${opts.name}.exe`)
       var operations = [
         function (cb) {
-          fs.move(path.join(tempPath, 'brave.exe'), newExePath, cb)
+          cb()
         }
       ]
 

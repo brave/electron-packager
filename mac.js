@@ -108,7 +108,6 @@ module.exports = {
       appPlist.CFBundleDisplayName = opts.name
       appPlist.CFBundleIdentifier = appBundleIdentifier
       appPlist.CFBundleName = opts.name
-      appPlist.CrProductDirName = opts['product-dir-name']
       helperPlist.CFBundleDisplayName = opts.name + ' Helper'
       helperPlist.CFBundleIdentifier = helperBundleIdentifier
       appPlist.CFBundleExecutable = opts.name
